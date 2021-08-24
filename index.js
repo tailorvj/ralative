@@ -1,37 +1,41 @@
 exports.getRalFromHex = (hex) => {
-  return ralNumber[hexCode.indexOf(hex)];
+  return ralNumber[ralHexCode.indexOf(hex)];
 };
 
 exports.getHexFromRalNumber = (ral) => {
-  return hexCode[ralNumber.indexOf(ral)];
+  return ralHexCode[ralNumber.indexOf(ral)];
 };
 
 exports.getralNamefromRalNumber = (ral) => {
   return ralName[ralNumber.indexOf(ral)];
 };
 
-exports.getHarmoniousRalNumbers = (index) => {
-  let first = _fixIndex(index - 1);
-  let second = _fixIndex(index + 1);
+exports.getHarmoniousRalNumbers = (ral) => {
+  let ralIndex = ralNumber.indexOf(ral);
+
+  let first = _fixIndex(ralIndex - 1);
+  let second = _fixIndex(ralIndex + 1);
 
   return [ralNumber[first], ralNumber[second]];
 };
 
-exports.getVibrantRalNumbers = (index) => {
+exports.getVibrantRalNumbers = (ral) => {
+  let ralIndex = ralNumber.indexOf(ral);
+
   // split complementary 150 angle.
   // size of ral list 213
   // 213/360 = 0.5917
   //150 * 0.5917 = 88.75
   const angleRAL = 89;
 
-  let first = _fixIndex(index + angleRAL);
-  let second = _fixIndex(index - angleRAL);
+  let first = _fixIndex(ralIndex + angleRAL);
+  let second = _fixIndex(ralIndex - angleRAL);
 
   return [ralNumber[first], ralNumber[second]];
 };
 
-exports.getObjectOfAllNumbers = () => {
-  return Object.assign(...ralName.map((k, i) => ({ [k]: hexCode[i] })));
+exports.getColorHexObject = () => {
+  return Object.assign(...ralName.map((k, i) => ({ [k]: ralHexCode[i] })));
 };
 
 const _fixIndex = (newIndex) => {
@@ -44,6 +48,18 @@ const _fixIndex = (newIndex) => {
   }
 
   return newIndex;
+};
+
+exports.getRalNumbersArray = () => {
+  return ralNumber;
+};
+
+exports.getRalHexCodeArray = () => {
+  return ralHexCode;
+};
+
+exports.getRalNamesArray = () => {
+  return ralName;
 };
 
 const ralNumber = [
@@ -262,7 +278,7 @@ const ralNumber = [
   "RAL 9023",
 ];
 
-const hexCode = [
+const ralHexCode = [
   "#CCC58F",
   "#D1BC8A",
   "#D2B773",

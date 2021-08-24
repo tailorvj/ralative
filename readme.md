@@ -4,6 +4,14 @@ I've written this module in order to allow easy use of the RAL color wheel in JS
 
 Some of the code here has been adpated from a Flutter app my team has written a few months ago, named ColorMatch. It had some bugs in it actually, so I'm glad I got the chance to rebuild and extend it in JS. 
 
+### Changelog
+
+#### RALative 1.0.1
+
+* Added getRalNumbersArray()
+* Added getRalHexCodeArray()
+* Added getRalNamesArray()
+
 ### Add the library to your solution
 
 ```bash
@@ -22,6 +30,42 @@ const ralative = require("ralative");
 
 
 ### Available functions
+
+#### getRalNumbersArray() 
+
+Returns an array of all RAL numbers in the format "RAL XXXX"
+
+For example, 
+
+```javascript
+
+const RALNUMBERARRAY = ralative.getRalNumbersArray();
+
+```
+
+#### getRalHexCodeArray() 
+
+Returns an array of all RAL hex codes in the format "#123456"
+
+For example, 
+
+```javascript
+
+const RALHEXARRAY = ralative.getRalHexCodeArray();
+
+```
+
+#### getRalNamesArray() 
+
+Returns an array of all RAL hex codes in the format "Green beige"
+
+For example, 
+
+```javascript
+
+const COLORNAMEARRAY = ralative.getRalNamesArray();
+
+```
 
 #### getRalFromHex(hex)
 
