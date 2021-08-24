@@ -4,5 +4,117 @@ I've written this module in order to allow easy use of the RAL color wheel in JS
 
 Some of the code here has been adpated from a Flutter app my team has written a few months ago, named ColorMatch. It had some bugs in it actually, so I'm glad I got the chance to rebuild and extend it in JS. 
 
-## How to use the library
+### Add the library to your solution
 
+```bash
+
+$ npm install ralative --save
+
+```
+
+### Import in your JS
+
+```javascript
+
+const ralative = require("ralative");
+
+```
+
+
+### Available functions
+
+#### getRalFromHex(hex)
+
+This function expects a hex code from the offical RAL list as input and will return the RAL number in the format "RAL XXXX", where XXXX is the RAL number
+
+For example
+
+```javascript
+
+const RAL1000 = ralative.getRalFromHex("#CCC58F");
+
+```
+
+#### getHexFromRalNumber(ral)
+
+This function expects an official RAL number in the format "RAL XXXX" as input and will return the corresponding hex value
+
+For example,
+
+```javascript
+
+const hexCCC58F = ralative.getHexFromRal("RAL 1000");
+
+```
+
+#### getralNamefromRalNumber(ral)
+
+This function expects an official RAL number in the format "RAL XXXX" as input and will return the corresponding official color name in English
+
+For example,
+
+```javascript
+
+const GREEN_BEIGE = ralative.getNameFromRalNumber("RAL 1000");
+
+```
+
+#### getHarmoniousRalNumbers(ral)
+
+This function expects an official RAL number in the format "RAL XXXX" as input and will return an Array with two adjacent RAL numbers in it
+
+For example,
+
+```javascript
+
+//returns ["RAL 1000", "RAL 1002" ]
+const ANALOGOUS1001 = ralative.getHarmoniousRalNumbers("RAL 1001");
+
+```
+
+From here you could easily get the hex values for each of the RALs retured from the function by doing
+
+```javascript
+
+let firstAnalogousHex = ralative.getHexFromRal(ANALOGOUS1001[0]);
+
+let secondAnalogousHex = ralative.getHexFromRal(ANALOGOUS1001[1]);
+
+```
+
+#### getVibrantRalNumbers(ral)
+
+This function expects an official RAL number in the format "RAL XXXX" as input and will return an Array with two split complementary RAL numbers in it
+
+For example,
+
+```javascript
+
+//returns ["RAL 1020", "RAL 8024" ]
+const VIBRANT6001 = ralative.getHarmoniougetVibrantRalNumberssRalNumbers("RAL 6001");
+
+```
+
+
+From here you could easily get the hex values for each of the RALs retured from the function by doing
+
+```javascript
+
+let firstAnalogousHex = ralative.getHexFromRal(VIBRANT6001[0]);
+
+let secondAnalogousHex = ralative.getHexFromRal(VIBRANT6001[1]);
+
+```
+
+#### getColorHexObject() 
+
+This function will return an object with color names and their corresponding hex values
+
+For example,
+
+```javascript
+
+//returns an object with all color names and their hex values
+const COLORHEXOBJ = ralative.getColorHexObject();
+
+```
