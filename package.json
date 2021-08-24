@@ -1,12 +1,22 @@
 {
-  "name": "ral",
+  "name": "ralative",
   "version": "1.0.0",
   "description": "A node library that provides all official RAL color numbers, names and hex values",
   "main": "ral.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["color, theory, ral, color wheel, design"],
+  "keywords": [
+    "color, theory, ral, color wheel, design"
+  ],
   "author": "@tailorvj",
-  "license": "MIT. All rights reserved to Asaf Prihadash tailorvj.com"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailorvj/ralative.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tailorvj/ralative/issues"
+  },
+  "homepage": "https://github.com/tailorvj/ralative#readme"
 }
