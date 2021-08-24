@@ -6,7 +6,7 @@ exports.getHexFromRalNumber = (ral) => {
   return ralHexCode[ralNumber.indexOf(ral)];
 };
 
-exports.getralNamefromRalNumber = (ral) => {
+exports.getRalNamefromRalNumber = (ral) => {
   return ralName[ralNumber.indexOf(ral)];
 };
 

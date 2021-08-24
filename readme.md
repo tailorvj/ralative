@@ -87,11 +87,11 @@ For example,
 
 ```javascript
 
-const hexCCC58F = ralative.getHexFromRal("RAL 1000");
+const hexCCC58F = ralative.getHexFromRalNumber("RAL 1000");
 
 ```
 
-#### getralNamefromRalNumber(ral)
+#### getRalNamefromRalNumber(ral)
 
 This function expects an official RAL number in the format "RAL XXXX" as input and will return the corresponding official color name in English
 
@@ -99,7 +99,7 @@ For example,
 
 ```javascript
 
-const GREEN_BEIGE = ralative.getNameFromRalNumber("RAL 1000");
+const GREEN_BEIGE = ralative.getRalNamefromRalNumber("RAL 1000");
 
 ```
 
@@ -135,7 +135,7 @@ For example,
 ```javascript
 
 //returns ["RAL 1020", "RAL 8024" ]
-const VIBRANT6001 = ralative.getHarmoniougetVibrantRalNumberssRalNumbers("RAL 6001");
+const VIBRANT6001 = ralative.getVibrantRalNumbers("RAL 6001");
 
 ```
 
@@ -144,9 +144,9 @@ From here you could easily get the hex values for each of the RALs retured from 
 
 ```javascript
 
-let firstAnalogousHex = ralative.getHexFromRal(VIBRANT6001[0]);
+let firstVibranHex = ralative.getHexFromRal(VIBRANT6001[0]);
 
-let secondAnalogousHex = ralative.getHexFromRal(VIBRANT6001[1]);
+let secondVibrantHex = ralative.getHexFromRal(VIBRANT6001[1]);
 
 ```
 
