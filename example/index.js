@@ -30,7 +30,7 @@ ralative.getRalNumbersArray().forEach((ralNumber) => {
   console.log(
     ralNumber,
     " Color Name:",
-    ralative.getralNamefromRalNumber(ralNumber)
+    ralative.getRalNamefromRalNumber(ralNumber)
   );
 });
 
