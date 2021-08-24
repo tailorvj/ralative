@@ -1,4 +1,4 @@
-## The RAL node.js module
+## The RALative node.js module
 
 I've written this module in order to allow easy use of the RAL color wheel in JS solutions and specifically in the ProtoNFT Avatar Generator my team is building for the NFT Hack Hackathon and the Women in Blockchain community. 
 
