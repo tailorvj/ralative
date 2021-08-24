@@ -6,6 +6,13 @@ Some of the code here has been adpated from a Flutter app my team has written a 
 
 ### Changelog
 
+#### RALative 1.0.2
+
+* Added an example folder
+* Fixed minor naming bugs and other exports problems
+* All functions manually tested and seem to be working
+* No safeguards yet, but fully functional
+
 #### RALative 1.0.1
 
 * Added getRalNumbersArray()
