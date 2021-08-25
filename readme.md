@@ -6,6 +6,10 @@ Some of the code here has been adpated from a Flutter app my team has written a 
 
 ### Changelog
 
+#### RALative 1.0.3
+
+* exporting ralName, ralHexCode and ralNumber for direct referencing in scripts
+
 #### RALative 1.0.2
 
 * Added an example folder

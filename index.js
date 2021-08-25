@@ -62,7 +62,7 @@ exports.getRalNamesArray = () => {
   return ralName;
 };
 
-const ralNumber = [
+exports.ralNumber = [
   "RAL 1000",
   "RAL 1001",
   "RAL 1002",
@@ -278,7 +278,7 @@ const ralNumber = [
   "RAL 9023",
 ];
 
-const ralHexCode = [
+exports.ralHexCode = [
   "#CCC58F",
   "#D1BC8A",
   "#D2B773",
@@ -494,7 +494,7 @@ const ralHexCode = [
   "#828282",
 ];
 
-const ralName = [
+exports.ralName = [
   "Green beige",
   "Beige",
   "Sand yellow",
