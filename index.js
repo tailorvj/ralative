@@ -13,8 +13,8 @@ function getRalNamefromRalNumber(ral) {
 function getHarmoniousRalNumbers(ral) {
   let ralIndex = ralNumber.indexOf(ral);
 
-  let first = _fixIndex(ralIndex - 1);
-  let second = _fixIndex(ralIndex + 1);
+  let first = fixRalIndex(ralIndex - 1);
+  let second = fixRalIndex(ralIndex + 1);
 
   return [ralNumber[first], ralNumber[second]];
 }
@@ -28,8 +28,8 @@ function getVibrantRalNumbers(ral) {
   //150 * 0.5917 = 88.75
   const angleRAL = 89;
 
-  let first = _fixIndex(ralIndex + angleRAL);
-  let second = _fixIndex(ralIndex - angleRAL);
+  let first = fixRalIndex(ralIndex + angleRAL);
+  let second = fixRalIndex(ralIndex - angleRAL);
 
   return [ralNumber[first], ralNumber[second]];
 }
@@ -38,7 +38,7 @@ function getColorHexObject() {
   return Object.assign(...ralName.map((k, i) => ({ [k]: ralHexCode[i] })));
 }
 
-const _fixIndex = (newIndex) => {
+function fixRalIndex(newIndex) {
   if (newIndex >= ralNumber.length) {
     return newIndex - ralNumber.length;
   }
@@ -48,7 +48,7 @@ const _fixIndex = (newIndex) => {
   }
 
   return newIndex;
-};
+}
 
 function getRalNumbersArray() {
   return ralNumber;
@@ -720,4 +720,8 @@ module.exports = {
   getRalNumbersArray,
   getRalHexCodeArray,
   getRalNamesArray,
+  ralName,
+  ralHexCode,
+  ralNumber,
+  fixRalIndex,
 };

@@ -6,6 +6,10 @@ Some of the code here has been adpated from a Flutter app my team has written a 
 
 ### Changelog
 
+#### RALative 1.0.5
+
+* Trying to export everyting, hoping it would work better with React
+
 #### RALative 1.0.4
 
 * Trying to using the revealing module pattern. Hoping this would make it work better universally (in React as well as node.js)

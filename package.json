@@ -1,6 +1,6 @@
 {
   "name": "ralative",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A node library that provides all official RAL color numbers, names and hex values. It can generate analogous and split complementary colors from a base color",
   "main": "index.js",
   "scripts": {
