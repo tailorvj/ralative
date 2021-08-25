@@ -6,6 +6,11 @@ Some of the code here has been adpated from a Flutter app my team has written a 
 
 ### Changelog
 
+#### RALative 1.0.4
+
+* Trying to using the revealing module pattern. Hoping this would make it work better universally (in React as well as node.js)
+* removed direct references to value array and using get methods instead
+
 #### RALative 1.0.3
 
 * exporting ralName, ralHexCode and ralNumber for direct referencing in scripts

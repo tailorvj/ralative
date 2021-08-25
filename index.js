@@ -1,25 +1,25 @@
-exports.getRalFromHex = (hex) => {
+function getRalFromHex(hex) {
   return ralNumber[ralHexCode.indexOf(hex)];
-};
+}
 
-exports.getHexFromRalNumber = (ral) => {
+function getHexFromRalNumber(ral) {
   return ralHexCode[ralNumber.indexOf(ral)];
-};
+}
 
-exports.getRalNamefromRalNumber = (ral) => {
+function getRalNamefromRalNumber(ral) {
   return ralName[ralNumber.indexOf(ral)];
-};
+}
 
-exports.getHarmoniousRalNumbers = (ral) => {
+function getHarmoniousRalNumbers(ral) {
   let ralIndex = ralNumber.indexOf(ral);
 
   let first = _fixIndex(ralIndex - 1);
   let second = _fixIndex(ralIndex + 1);
 
   return [ralNumber[first], ralNumber[second]];
-};
+}
 
-exports.getVibrantRalNumbers = (ral) => {
+function getVibrantRalNumbers(ral) {
   let ralIndex = ralNumber.indexOf(ral);
 
   // split complementary 150 angle.
@@ -32,11 +32,11 @@ exports.getVibrantRalNumbers = (ral) => {
   let second = _fixIndex(ralIndex - angleRAL);
 
   return [ralNumber[first], ralNumber[second]];
-};
+}
 
-exports.getColorHexObject = () => {
+function getColorHexObject() {
   return Object.assign(...ralName.map((k, i) => ({ [k]: ralHexCode[i] })));
-};
+}
 
 const _fixIndex = (newIndex) => {
   if (newIndex >= ralNumber.length) {
@@ -50,19 +50,19 @@ const _fixIndex = (newIndex) => {
   return newIndex;
 };
 
-exports.getRalNumbersArray = () => {
+function getRalNumbersArray() {
   return ralNumber;
-};
+}
 
-exports.getRalHexCodeArray = () => {
+function getRalHexCodeArray() {
   return ralHexCode;
-};
+}
 
-exports.getRalNamesArray = () => {
+function getRalNamesArray() {
   return ralName;
-};
+}
 
-exports.ralNumber = [
+const ralNumber = [
   "RAL 1000",
   "RAL 1001",
   "RAL 1002",
@@ -278,7 +278,7 @@ exports.ralNumber = [
   "RAL 9023",
 ];
 
-exports.ralHexCode = [
+const ralHexCode = [
   "#CCC58F",
   "#D1BC8A",
   "#D2B773",
@@ -494,7 +494,7 @@ exports.ralHexCode = [
   "#828282",
 ];
 
-exports.ralName = [
+const ralName = [
   "Green beige",
   "Beige",
   "Sand yellow",
@@ -709,3 +709,15 @@ exports.ralName = [
   "Pearl light grey",
   "Pearl dark grey",
 ];
+
+module.exports = {
+  getRalFromHex,
+  getHexFromRalNumber,
+  getRalNamefromRalNumber,
+  getHarmoniousRalNumbers,
+  getVibrantRalNumbers,
+  getColorHexObject,
+  getRalNumbersArray,
+  getRalHexCodeArray,
+  getRalNamesArray,
+};
